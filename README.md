@@ -123,7 +123,7 @@ Also, its fast queries, aggregations, and time-based indexing, make it a perfect
    The data receiving from client is mostly in a raw format and needs only basic cleaning and simple transformations according this scenario.
    There for no need for complex processing such as joins from other sources, aggregation across different datasets, or real-time event-driven operations.
 
-   # So, I decided to go with direct transfer approach. (MongoDB to TimescaleDB)
+   # So, decided to go with direct transfer approach. (MongoDB to TimescaleDB)
      Direct transfer from MongoDB to TimescaleDB simplifies the pipeline by minimizing overhead. We can avoid unnecessary complexity from stream processors since the data doesn’t require real-time processing or complex joins.
      Data from MongoDB will be cleaned up and restructured before insertion into TimescaleDB using SQL scripts. This minimizes the need for a complex processing layer.
 
