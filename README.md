@@ -119,13 +119,14 @@ TimescaleDB is optimized for time-series data, which is exactly what the smartwa
 Also, its fast queries, aggregations, and time-based indexing, make it a perfect fit for efficiently querying.
 
 ## Data Processing & Transformation 
- # Minimal Transformations
+# Minimal Transformations
    The data receiving from client is mostly in a raw format and needs only basic cleaning and simple transformations according this scenario.
    There for no need for complex processing such as joins from other sources, aggregation across different datasets, or real-time event-driven operations.
 
-   # So, decided to go with direct transfer approach. (MongoDB to TimescaleDB)
-     Direct transfer from MongoDB to TimescaleDB simplifies the pipeline by minimizing overhead. We can avoid unnecessary complexity from stream processors since the data doesn’t require real-time processing or complex joins.
-     Data from MongoDB will be cleaned up and restructured before insertion into TimescaleDB using SQL scripts. This minimizes the need for a complex processing layer.
+   So, decided to go with direct transfer approach. (MongoDB to TimescaleDB)
+   Direct transfer from MongoDB to TimescaleDB simplifies the pipeline by minimizing overhead. We can avoid unnecessary complexity from stream processors since the data doesn’t require real-time processing or 
+   complex joins.
+   Data from MongoDB will be cleaned up and restructured before insertion into TimescaleDB using SQL scripts. This minimizes the need for a complex processing layer.
 
 ## Query API
 The Query API is built using Flask, which exposes endpoints for querying time-series data stored in TimescaleDB (PostgreSQL).
